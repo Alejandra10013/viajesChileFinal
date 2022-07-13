@@ -1,5 +1,6 @@
 body {
     font-family: 'Raleway', sans-serif;
+    background-color: black;
 }
 
 html * {
@@ -12,8 +13,27 @@ html {
     scroll-behavior: smooth;
 }
 
+.navbar-brand img {
+    width: 50px;
+    margin-left: 15px;
+}
+
 @media (max-width: 768px) {
     #barra-navegacion {
         background-color: black;
     }
+}
+
+hr {
+    background: #32AFCE;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.cardIcon {
+    background-color: #32AFCE;
+}
+
+.cardIcon i {
+    font-size: 30px;
 }

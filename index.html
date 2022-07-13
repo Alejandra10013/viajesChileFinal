@@ -57,10 +57,10 @@
                     <a class="nav-link" href="#quienesSomos">Quienes Somos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Destacados</a>
+                    <a class="nav-link" href="#destacados">Destacados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#contacto">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -147,29 +147,96 @@
         </div>
     </section>
 
-    <section id="destacados">
-        
-    </section>
-
-
-
-    <section id="imagenes" class="py-5">
-        <h2 class="text-center pt-3">SECCION IMAGENES</h2>
-        <div class="d-flex justify-content-around flex-wrap py-5">
-            <div class="text-center">
-                <img src="./assets/img/card1.jpg" class="rounded p-2 w-100" alt="..." />
+    <section id="destacados" class="container-fluid bg-transparent text-white pb-5 mt-5 pt-5">
+        <h2 class="text-center pt-5 pb-3">Destacados</h2>
+        <hr class="my-2 mx-5">
+        <div class="row card-deck px-3 py-4" id="hideCardBody">
+            <div class="col-12 col-md-3 ">
+                <div class="card mx-auto my-2" style="width: 85%;">
+                    <img class="card-img-top" src="./assets/img/card1.jpg" alt="card 1">
+                    <div class="card-body bg-card">
+                        <h5 class="card-title font-weight-bold" id="cardTitle">Lorem Ipsum e un testo </h5>
+                        <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet
+                            ac eleifend risus, urna auctor inceptos mattis dapibus.</p>
+                    </div>
+                </div>
             </div>
-            <div class="text-center">
-                <img src="./assets/img/card2.jpg" class="rounded p-2 w-100" alt="..." />
+            <div class="col-12 col-md-3 ">
+                <div class="card mx-auto my-2" style="width: 85%;">
+                    <img class="card-img-top" src="./assets/img/card4.jpg" alt="card 2">
+                    <div class="card-body bg-card">
+                        <h5 class="card-title font-weight-bold" id="cardTitleDos">Perche lo utilizziamo</h5>
+                        <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet
+                            ac eleifend risus, urna auctor inceptos mattis dapibus.</p>
+                    </div>
+                </div>
             </div>
-            <div class="text-center">
-                <img src="./assets/img/card3.jpg" class="rounded p-2 w-100" alt="..." />
+            <div class="col-12 col-md-3 ">
+                <div class="card mx-auto my-2" style="width: 85%;">
+                    <img class="card-img-top" src="./assets/img/card3.jpg" alt="card 3">
+                    <div class="card-body bg-card">
+                        <h5 class="card-title font-weight-bold" id="cardTitleTres">Da dove viene inceptos</h5>
+                        <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet
+                            ac eleifend risus, urna auctor inceptos mattis dapibus.</p>
+                    </div>
+                </div>
             </div>
-            <div class="text-center">
-                <img src="./assets/img/card4.jpg" class="rounded p-2 w-100" alt="..." />
+            <div class="col-12 col-md-3 ">
+                <div class="card mx-auto my-2" style="width: 85%;">
+                    <img class="card-img-top" src="./assets/img/card4.jpg" alt="card 3">
+                    <div class="card-body bg-card">
+                        <h5 class="card-title font-weight-bold" id="cardTitleTres">Dove posso trovarlo</h5>
+                        <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet
+                            ac eleifend risus, urna auctor inceptos mattis dapibus.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <section id="contacto" class="">
+        <h2 class="text-center pt-5 pb-3">Contacto</h2>
+        <hr class="my-2 mx-5">
+        <div class="container-fluid">
+            <h2>CONTACTATE CON NOSOTROS!</h2>
+            <button type="button" class="btn btn-outline-light my-3" data-toggle="modal"
+                data-target="#staticBackdrop">Empezar</button>                
+        </div>
+    </section>
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Contactanos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form-suscripcion">
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre" required="">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Apellido" name="apellido" id="apellido" required="">
+                </div>
+                <div class="col-12 mt-3">
+                  <input type="email" class="form-control" placeholder="correo@gmail.com" name="correo" id="correo" required="">
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="textarea">Cuentanos sobre ti:</label>
+                <textarea class="form-control" id="textarea" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar!</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
 
 </body>
 

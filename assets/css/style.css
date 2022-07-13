@@ -37,3 +37,7 @@ hr {
 .cardIcon i {
     font-size: 30px;
 }
+
+.bg-card {
+    background-color: #32AFCE;
+}

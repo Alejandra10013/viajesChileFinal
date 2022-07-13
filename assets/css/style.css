@@ -1,3 +1,19 @@
 body {
     font-family: 'Raleway', sans-serif;
 }
+
+html * {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    #barra-navegacion {
+        background-color: black;
+    }
+}

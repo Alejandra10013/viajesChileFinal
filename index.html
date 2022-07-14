@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- BOOTSTRAP -->
+    <!-- BOOTSTRAP 4.6.1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -35,6 +35,7 @@
 
 <body>
 
+    <!-- BARRA NAVEGACION -->
     <nav class="navbar navbar-expand-lg bg-transparent navbar-dark fixed-top" id="barra-navegacion">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -66,6 +67,7 @@
         </div>
     </nav>
 
+    <!-- INICIO -->
     <section id="inicio" class="d-none d-md-block">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -92,7 +94,8 @@
         </div>
     </section>
 
-    <section id="quienesSomos" class="py-5">
+    <!-- QUIENES SOMOS / HIDDEN ON SMALLER DEVICES -->
+    <section id="quienesSomos" class="py-5 d-none d-sm-none d-md-block">
         <h2 class="text-center py-3 text-white">¿Quiénes Somos?</h2>
         <hr>
         <div class="row no-gutters mt-5 mx-5  justify-content-center">
@@ -147,10 +150,11 @@
         </div>
     </section>
 
+    <!-- DESTACADOS -->
     <section id="destacados" class="container-fluid bg-transparent text-white pb-5 mt-5 pt-5">
         <h2 class="text-center pt-5 pb-3">Destacados</h2>
         <hr class="my-2 mx-5">
-        <div class="row card-deck px-3 py-4" id="hideCardBody">
+        <div class="row card-deck px-3 py-4">
             <div class="col-12 col-md-3 ">
                 <div class="card mx-auto my-2" style="width: 85%;">
                     <img class="card-img-top" src="./assets/img/card1.jpg" alt="card 1">
@@ -165,7 +169,7 @@
                 <div class="card mx-auto my-2" style="width: 85%;">
                     <img class="card-img-top" src="./assets/img/card4.jpg" alt="card 2">
                     <div class="card-body bg-card">
-                        <h5 class="card-title font-weight-bold" id="cardTitleDos">Perche lo utilizziamo</h5>
+                        <h5 class="card-title font-weight-bold" id="cardTitleDos">Perche lo utilizziamo dove</h5>
                         <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet
                             ac eleifend risus, urna auctor inceptos mattis dapibus.</p>
                     </div>
@@ -185,7 +189,7 @@
                 <div class="card mx-auto my-2" style="width: 85%;">
                     <img class="card-img-top" src="./assets/img/card4.jpg" alt="card 3">
                     <div class="card-body bg-card">
-                        <h5 class="card-title font-weight-bold" id="cardTitleTres">Dove posso trovarlo</h5>
+                        <h5 class="card-title font-weight-bold" id="cardTitleTres">Dove posso trovarlo dove</h5>
                         <p class="card-text">Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet
                             ac eleifend risus, urna auctor inceptos mattis dapibus.</p>
                     </div>
@@ -194,49 +198,73 @@
         </div>
     </section>
 
-    <section id="contacto" class="">
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-5 text-white text-center">
         <h2 class="text-center pt-5 pb-3">Contacto</h2>
-        <hr class="my-2 mx-5">
+        <hr class="mt-2 mb-4 mx-5">
         <div class="container-fluid">
-            <h2>CONTACTATE CON NOSOTROS!</h2>
+            <h2 class="pt-4 ">CONTÁCTATE CON NOSOTROS!</h2>
+            <h5 class="py-4">Planifica tu viaje con nosotros y descubre la biodiversidad Chilena.</h5>
             <button type="button" class="btn btn-outline-light my-3" data-toggle="modal"
-                data-target="#staticBackdrop">Empezar</button>                
+                data-target="#basicForm">Empezar</button>
         </div>
     </section>
 
-    <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Contactanos</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="form-suscripcion">
-              <div class="form-row">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre" required="">
+    <!-- FORMULARIO CONTACTO -->
+    <div class="modal fade" id="basicForm" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Contactanos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Apellido" name="apellido" id="apellido" required="">
+                <div class="modal-body">
+                    <form id="formulario-contacto">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre"
+                                    required>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Apellido" name="apellido"
+                                    id="apellido" required>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input type="email" class="form-control" placeholder="correo@email.com" name="correo"
+                                    id="correo" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="textarea">Qué lugares te gustaria conocer?</label>
+                            <textarea class="form-control" id="textarea" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
                 </div>
-                <div class="col-12 mt-3">
-                  <input type="email" class="form-control" placeholder="correo@gmail.com" name="correo" id="correo" required="">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <label for="textarea">Cuentanos sobre ti:</label>
-                <textarea class="form-control" id="textarea" rows="5"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar!</button>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          </div>
+            </div>
         </div>
-      </div>
+    </div>
+
+    <!-- PIE PAGINA -->
+    <footer class="text-white text-center">
+        <div class="row mx-3 px-4 py-1">
+            <div class="col-6">
+                <h3>VIAJES CHILE</h3>
+            </div>
+            <div class="col-6 icons-footer">
+                <a href="https://github.com/Alejandra10013"><i class="fa-brands fa-github px-3"></i></a>
+                <a href="https://cl.linkedin.com"><i class="fa-brands fa-linkedin px-3"></i></a>
+                <a href="https://twitter.com"><i class="fa-brands fa-twitter-square px-3"></i></a>
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-square px-3"></i></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

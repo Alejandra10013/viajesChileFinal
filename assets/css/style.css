@@ -1,5 +1,4 @@
 body {
-    font-family: 'Raleway', sans-serif;
     background-color: black;
 }
 
@@ -7,10 +6,17 @@ html * {
     box-sizing: border-box !important;
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    #barra-navegacion {
+        background-color: #0b8793 !important;
+    }
 }
 
 .navbar-brand img {
@@ -18,20 +24,14 @@ html {
     margin-left: 15px;
 }
 
-@media (max-width: 768px) {
-    #barra-navegacion {
-        background-color: black;
-    }
-}
-
 hr {
-    background: #32AFCE;
+    background: #0b8793;
     margin-left: 5%;
     margin-right: 5%;
 }
 
 .cardIcon {
-    background-color: #32AFCE;
+    background-color: #0b8793;
 }
 
 .cardIcon i {
@@ -39,5 +39,27 @@ hr {
 }
 
 .bg-card {
-    background-color: #32AFCE;
+    background-color: #0b8793;
+}
+
+#contacto div {
+    width: 85%;
+    height: 17em;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    background: #360033;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFA17F, #0b8793);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFA17F, #0b8793);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+footer {
+    background-color: #0b8793;
+}
+
+.icons-footer i {
+    font-size: 30px;
+    color: white;
 }
